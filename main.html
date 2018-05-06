@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Street View Image Modal</title>
+
+    <link rel="stylesheet" href="assets/stylesheets/reset.css">
+    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+  </head>
+  <body>
+    <h1>Styles are working?</h1>
+    <form class="" action="index.html" method="post" id="formCoordinates">
+      <input type="text" name="inputCoordinates" value="" id="inputCoordinates">
+      <button type="button" name="buttonCoordinates" id="buttonCoordinates">
+        Search for street view image</button>
+    </form>
+    This page is working
+
+
+
+    <div class="divClassModal" id="divIdModal">
+      <div class="divClassModalContent" id="divIdModalContent">
+        <span class="spanClassModalClose" id="spanIdModalClose">&times;</span>
+        <p>Content of the modal will be here</p>
+        <div class="divClassModalImage" id="divIdModalImage">
+          <img id="imgIdModalPhoto" src="https://maps.googleapis.com/maps/api/streetview?size=800x800&location=40.720032,-73.988354
+&fov=90&heading=235&pitch=10" alt="Image will be in this tag">
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/main.js">
+
+    </script>
+  </body>
+</html>
