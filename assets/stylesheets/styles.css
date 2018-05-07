@@ -23,10 +23,11 @@ h1 {
 }
 
 .divClassModalContent {
-  background-color: #fefefe;
+  background-color: #ffffff;
   margin: 15% auto;
   border-radius: 1px solid #888;
   width: 800px;
+  padding: 10px;
 }
 
 .spanClassModalClose {
@@ -45,6 +46,7 @@ h1 {
 
 .divClassModalImage {
   margin: 10px auto;
+  /* float:right; */
 }
 
 #imgIdModalPhoto {
