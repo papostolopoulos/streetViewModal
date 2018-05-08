@@ -11,7 +11,7 @@
   </head>
   <body>
     <h1>Street View Image Viewer</h1>
-    <h4>Enter your coordinates in the search box.</h4>
+    <h4>Enter your coordinates in the search box, separated with a comma.</h4>
     <h4>Click search</h4>
     <h4>Use the icons to move around the image or the keys "z", "x", "up", "down", "left", "right"</h4>
 
@@ -55,6 +55,14 @@
             </tr>
 
           </table>
+
+
+          <div class="divClassFormArea">
+            <form class="formClassCoordinates" action="index.html" method="post" id="formIdCoordinatesModal">
+              <input type="text" name="inputCoordinates" value="" size="17" placeholder="Enter coordinates" id="inputCoordinatesModal"><br>
+              <button type="button" name="buttonCoordinates" id="buttonCoordinatesModal">Search</button>
+            </form>
+          </div>
         </div>
 
 

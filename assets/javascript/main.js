@@ -2,7 +2,9 @@ console.log("It is connected");
 
 // LIST OF VARIABLES USED
 var buttonCoordinates = document.getElementById("buttonCoordinates");
+var buttonCoordinatesModal = document.getElementById("buttonCoordinatesModal");
 var inputCoordinates = document.getElementById("inputCoordinates");
+var inputCoordinatesModal = document.getElementById("inputCoordinatesModal");
 var divIdModal = document.getElementById("divIdModal");
 var spanIdModalClose = document.getElementById("spanIdModalClose");
 var imgIdModalPhoto = document.getElementById("imgIdModalPhoto");
@@ -30,7 +32,7 @@ var idMinusIcon = document.getElementById("iIdMinusIcon");
 
 // FUNCTIONS
 function updateImage() {
-  var coordinatesArr = inputCoordinates.value.split(",");
+  var coordinatesArr = divIdModal.style.display === "block" ? inputCoordinatesModal.value.split(",") : inputCoordinates.value.split(",");
   imageSrc.lat = coordinatesArr[0].trim();
   imageSrc.lon = coordinatesArr[1].trim();
 
@@ -40,7 +42,7 @@ function updateImage() {
 
 //DISPLAY MODAL ON CLICK OF SUBMIT BUTTON
 buttonCoordinates.onclick = updateImage;
-
+buttonCoordinatesModal.onclick = updateImage;
 
 //CLOSE MODAL WINDOW WHEN CLICKING AROUND CONTENT
 window.onclick = ()=>{
@@ -50,12 +52,12 @@ window.onclick = ()=>{
 //CLOSE MODAL WINDOW WHEN CLICKING ON X
 spanIdModalClose.onclick = () => divIdModal.style.display = "none";
 
-// CLOSE MODAL WINDOW WHEN HITING ESCAPE / OPEN MODAL WHEN HITIN ENTER
+// CLOSE MODAL WINDOW WHEN HITING ESCAPE
 window.onkeyup = (event)=>{
   if (divIdModal.style.display === "block" && event.key === "Escape") divIdModal.style.display = "none";
-  if (divIdModal.style.display === "none" &&
-   event.key === "Enter" &&
-   inputCoordinates.value.length !==0) updateImage;
+  // if (divIdModal.style.display === "none" &&
+  //  event.key === "Enter" &&
+  //  inputCoordinates.value.length !==0) updateImage;
 }
 
 // ADJUST IMAGE BASED ON KEY PRESSES
