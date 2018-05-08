@@ -8,6 +8,29 @@ h1 {
   font-size: 40px;
   font-weight: bold;
   text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+h4 {
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 0 0 0;
+}
+
+button, input{
+  font-size: 16px;
+}
+
+button{
+  margin-top: 5px;
+  background-color: #3B5998;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.divClassFormArea{
+  text-align: center;
+  padding-top: 20px;
 }
 
 .divClassModal {

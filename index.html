@@ -7,28 +7,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/stylesheets/reset.css">
     <link rel="stylesheet" href="assets/stylesheets/styles.css">
-    <link rel="stylesheet" href="assets/stylesheets/playground.css">
 
   </head>
   <body>
     <h1>Street View Image Viewer</h1>
-    <form class="forClassCoordinates" action="index.html" method="post" id="formIdCoordinates">
-      <input type="text" name="inputCoordinates" value="" id="inputCoordinates">
-      <button type="button" name="buttonCoordinates" id="buttonCoordinates">Search</button>
-    </form>
+    <h4>Enter your coordinates in the search box.</h4>
+    <h4>Click search</h4>
+    <h4>Use the icons to move around the image or the keys "z", "x", "up", "down", "left", "right"</h4>
 
-    <div class="modal">
-      <div class="left">
-        left
-
-      </div>
-      <div class="right">
-        <div class="x">
-          x
-
-        </div>
-        right
-      </div>
+    <div class="divClassFormArea">
+      <form class="formClassCoordinates" action="index.html" method="post" id="formIdCoordinates">
+        <input type="text" name="inputCoordinates" value="" size="50" placeholder="Enter coordinates" id="inputCoordinates"><br>
+        <button type="button" name="buttonCoordinates" id="buttonCoordinates">Search</button>
+      </form>
     </div>
 
 
@@ -36,33 +27,30 @@
     <div class="divClassModal" id="divIdModal">
       <div class="divClassModalContent" id="divIdModalContent">
 
-
-
-
         <div class="divClassModalIcons" id="divIdModalIcons">
           <table class="tableClassModalIcons" id="tableIdModalIcons">
             <tr>
-              <td></td>
-              <td><i class="fas fa-arrow-alt-circle-up" id="iIdUpIcon"></i></td>
-              <td></td>
+              <td>&nbsp</td>
+              <td id="tdIdUpIcon"><i class="fas fa-arrow-alt-circle-up" id="iIdUpIcon" title="Move up"></i></td>
+              <td>&nbsp</td>
             </tr>
 
             <tr>
-              <td><i class="fas fa-arrow-alt-circle-left" id="iIdLeftIcon"></i></td>
-              <td></td>
-              <td><i class="fas fa-arrow-alt-circle-right" id="iIdRightIcon"></i></td>
+              <td id="tdIdLeftIcon"><i class="fas fa-arrow-alt-circle-left" id="iIdLeftIcon" title="Move left"></i></td>
+              <td>&nbsp</td>
+              <td id="tdIdRightIcon"><i class="fas fa-arrow-alt-circle-right" id="iIdRightIcon" title="Move right"></i></td>
             </tr>
 
             <tr>
-              <td></td>
-              <td><i class="fas fa-arrow-alt-circle-down" id="iIdDownIcon"></i></td>
-              <td></td>
+              <td>&nbsp</td>
+              <td id="tdIdDownIcon"><i class="fas fa-arrow-alt-circle-down" id="iIdDownIcon" title="Move down"></i></td>
+              <td>&nbsp</td>
             </tr>
 
             <tr>
-              <td colspan="3" id="tdIdPlusMinusIcon">
-                <i class="fas fa-search-plus" id="iIdPlusIcon"></i>
-                <i class="fas fa-search-minus" id="iIdMinusIcon"></i>
+              <td colspan="3" id="tdIdPlusMinusIcons">
+                <i class="fas fa-search-plus" id="iIdPlusIcon" title="Zoom in"></i>&nbsp&nbsp&nbsp&nbsp
+                <i class="fas fa-search-minus" id="iIdMinusIcon" title="Zoom out"></i>
               </td>
             </tr>
 
