@@ -12,29 +12,57 @@ h1 {
 .divClassModal {
   display: none;
   position: fixed;
-  z-intex: 1;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
 }
 
 .divClassModalContent {
   background-color: #ffffff;
   margin: 15% auto;
-  border-radius: 1px solid #888;
   width: 800px;
+  height: 640px;
   padding: 10px;
 }
 
-.spanClassModalClose {
-  color: #aaa;
+.divClassModalIcons{
+  width: 18%;
+  background-color: red;
+  float: left;
+  padding: 5px;
+}
+
+.tableClassModalIcons {
+  width: 100%;
+  text-align: center;
+  font-size: 38px;
+}
+
+.divClassModalImage {
+  float:right;
+  width: 80%;
+  position: relative;
+}
+
+.divClassModalClose {
+  width: 10%;
+  top: 0;
+  right: 0;
   float: right;
-  font-size: 28px;
+  position: absolute;
+  padding-right: 10px;
+}
+
+.spanClassModalClose {
+  color: #ffffff;
+  float: right;
+  font-size: 38px;
   font-weight: bold;
+  z-index: 1;
 }
 
 .spanClassModalClose:focus,
@@ -42,15 +70,11 @@ h1 {
   color: black;
   cursor: pointer;
   text-decoration: none;
+  z-index: 1;
 }
 
-.divClassModalImage {
-  margin: 10px auto;
-  /* float:right; */
-}
 
 #imgIdModalPhoto {
-  margin: auto;
-  padding: 10px 0 10px 0;
-  display: block;
+  /* margin: auto; */
+  /* display: block; */
 }

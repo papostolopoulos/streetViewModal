@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <title>Street View Image Modal</title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/stylesheets/reset.css">
     <link rel="stylesheet" href="assets/stylesheets/styles.css">
+    <link rel="stylesheet" href="assets/stylesheets/playground.css">
+
   </head>
   <body>
     <h1>Styles are working?</h1>
@@ -17,15 +20,70 @@
     This page is working
 
 
+    <div class="modal">
+      <div class="left">
+        left
+
+      </div>
+      <div class="right">
+        <div class="x">
+          x
+
+        </div>
+        right
+      </div>
+    </div>
+
+
 
     <div class="divClassModal" id="divIdModal">
       <div class="divClassModalContent" id="divIdModalContent">
-        <span class="spanClassModalClose" id="spanIdModalClose">&times;</span>
-        <p>Content of the modal will be here</p>
-        <div class="divClassModalImage" id="divIdModalImage">
-          <img id="imgIdModalPhoto" src="https://maps.googleapis.com/maps/api/streetview?size=800x800&location=40.720032,-73.988354
-&fov=90&heading=235&pitch=10" alt="Image will be in this tag">
+
+
+
+
+        <div class="divClassModalIcons" id="divIdModalIcons">
+          <p>Content of the modal will be here</p>
+          <table class="tableClassModalIcons" id="tableIdModalIcons">
+            <tr>
+              <td>1</td>
+              <td><i class="fas fa-arrow-alt-circle-up"></i></td>
+              <td>3</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-arrow-alt-circle-left"></i></td>
+              <td>5</td>
+              <td><i class="fas fa-arrow-alt-circle-right"></i></td>
+            </tr>
+
+            <tr>
+              <td>7</td>
+              <td><i class="fas fa-arrow-alt-circle-down"></i></td>
+              <td>9</td>
+            </tr>
+
+            <tr>
+              <td><i class="fas fa-search-plus"></i></td>
+              <td colspan="2"><i class="fas fa-search-minus"></i></td>
+            </tr>
+
+          </table>
         </div>
+
+
+        <div class="divClassModalImage" id="divIdModalImage">
+          <div class="divClassModalClose" id="divIdModalClose">
+            <span class="spanClassModalClose" id="spanIdModalClose">&times;</span>
+          </div>
+          <img class="imgClassModalPhoto" id="imgIdModalPhoto" src="" alt="Image will be in this tag">
+        </div>
+
+        <div class="divClassModalClear" id="divIdModalClear">
+          <!-- This needs to be empty -->
+        </div>
+
+
       </div>
     </div>
 
