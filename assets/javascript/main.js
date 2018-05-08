@@ -12,48 +12,47 @@ var imageAttributes = {
   heading: 235,
   pitch: 10
 };
-var imageSource = `https://maps.googleapis.com/maps/api/streetview?size=800x800
-&location=${imageAttributes.lat},${imageAttributes.lon}
-&fov=${imageAttributes.fov}
-&heading=${imageAttributes.heading}
-&pitch=${imageAttributes.pitch}`;
+
 
 //DISPLAY MODAL ON CLICK OF SUBMIT BUTTON
-buttonCoordinates.addEventListener("click", function() {
-  var coordinatesArr = inputCoordinates.value.includes(",") ?
-  inputCoordinates.value.split(",") : inputCoordinates.value.includes(", ") ?
-  inputCoordinates.value.split(", ") :
-  inputCoordinates.value.split(" ");
-  imageAttributes.lat = coordinatesArr[0];
-  imageAttributes.lon = coordinatesArr[1];
-
+buttonCoordinates.onclick = ()=>{
+  var coordinatesArr = inputCoordinates.value.split(",");
+  imageAttributes.lat = coordinatesArr[0].trim();
+  imageAttributes.lon = coordinatesArr[1].trim();
 
   imgIdModalPhoto.src = `https://maps.googleapis.com/maps/api/streetview?size=800x800
   &location=${imageAttributes.lat},${imageAttributes.lon}
   &fov=${imageAttributes.fov}
   &heading=${imageAttributes.heading}
-  &pitch=${imageAttributes.pitch}`;
+  &pitch=${imageAttributes.pitch}`.match(/\S/g).join('');
   divIdModal.style.display = "block";
   console.log(imgIdModalPhoto.src);
-});
+};
 
 
 //CLOSE MODAL WINDOW WHEN CLICKING AROUND CONTENT
 window.onclick = ()=>{
   if (event.target === divIdModal) divIdModal.style.display = "none";
 };
-// window.addEventListener("click", function() {
-//   if (event.target === divIdModal) {
-//     divIdModal.style.display = "none";
-//   }
-// });
-
 
 //CLOSE MODAL WINDOW WHEN CLICKING ON X
 spanIdModalClose.onclick = () => divIdModal.style.display = "none";
-// spanIdModalClose.addEventListener("click", function() {
-//   divIdModal.style.display = "none";
-// });
 
+
+window.onkeydown = (event)=>{
+  console.log(event);
+  console.log(event.key);
+  if (event.key === "ArrowRight") imageAttributes.heading += 5;
+  if (event.key === "ArrowRight") imageAttributes.heading -= 5;
+  if (event.key === "ArrowUp") imageAttributes.pitch += 5;
+  if (event.key === "ArrowDown") imageAttributes.pitch -= 5;
+
+  imgIdModalPhoto.src = `https://maps.googleapis.com/maps/api/streetview?size=800x800
+  &location=${imageAttributes.lat},${imageAttributes.lon}
+  &fov=${imageAttributes.fov}
+  &heading=${imageAttributes.heading}
+  &pitch=${imageAttributes.pitch}`.match(/\S/g).join('');
+  console.log(imgIdModalPhoto.src);  
+};
 /*https://maps.googleapis.com/maps/api/streetview?size=800x800&location=40.720032,-73.988354
 &fov=90&heading=235&pitch=10 */
