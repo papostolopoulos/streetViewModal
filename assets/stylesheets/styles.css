@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  color: #3B5998;
 }
 
 
@@ -22,7 +23,8 @@ h1 {
 }
 
 .divClassModalContent {
-  background-color: #ffffff;
+  background-color: #3B5998;
+  color: #ffffff;
   margin: 15% auto;
   width: 800px;
   height: 640px;
@@ -30,16 +32,26 @@ h1 {
 }
 
 .divClassModalIcons{
-  width: 18%;
-  background-color: red;
+  background-color: #3B5998;
   float: left;
   padding: 5px;
+  width: 18%;
 }
 
 .tableClassModalIcons {
-  width: 100%;
-  text-align: center;
   font-size: 38px;
+  text-align: center;
+  width: 100%;
+}
+
+.fas:hover{
+  cursor: pointer;
+  color: #000000;
+}
+
+#tdIdPlusMinusIcon {
+  padding-top: 10px;
+  text-align: center;
 }
 
 .divClassModalImage {
@@ -71,10 +83,4 @@ h1 {
   cursor: pointer;
   text-decoration: none;
   z-index: 1;
-}
-
-
-#imgIdModalPhoto {
-  /* margin: auto; */
-  /* display: block; */
 }

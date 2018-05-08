@@ -29,7 +29,6 @@ buttonCoordinates.onclick = ()=>{
   imageSrc.lon = coordinatesArr[1].trim();
 
   imgIdModalPhoto.src = imageSrc.url();
-
   divIdModal.style.display = "block";
   console.log(imgIdModalPhoto.src);
 };
@@ -44,9 +43,12 @@ window.onclick = ()=>{
 spanIdModalClose.onclick = () => divIdModal.style.display = "none";
 
 // CLOSE MODAL WINDOW WHEN HITTING ESCAPE
+window.onkeyup = (event)=>{
+  if (divIdModal.style.display = "block" && event.key === "Escape") divIdModal.style.display = "none";
+  if (divIdModal.style.display = "none" && event.key === "Enter") divIdModal.style.display = "block";
+}
 
-
-
+// ADJUST IMAGE BASED ON KEY PRESSES
 window.onkeydown = (event)=>{
   console.log(event);
   console.log(event.key);

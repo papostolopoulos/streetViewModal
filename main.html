@@ -11,14 +11,11 @@
 
   </head>
   <body>
-    <h1>Styles are working?</h1>
-    <form class="" action="index.html" method="post" id="formCoordinates">
+    <h1>Street View Image Viewer</h1>
+    <form class="forClassCoordinates" action="index.html" method="post" id="formIdCoordinates">
       <input type="text" name="inputCoordinates" value="" id="inputCoordinates">
-      <button type="button" name="buttonCoordinates" id="buttonCoordinates">
-        Search for street view image</button>
+      <button type="button" name="buttonCoordinates" id="buttonCoordinates">Search</button>
     </form>
-    This page is working
-
 
     <div class="modal">
       <div class="left">
@@ -43,29 +40,30 @@
 
 
         <div class="divClassModalIcons" id="divIdModalIcons">
-          <p>Content of the modal will be here</p>
           <table class="tableClassModalIcons" id="tableIdModalIcons">
             <tr>
-              <td>1</td>
-              <td><i class="fas fa-arrow-alt-circle-up"></i></td>
-              <td>3</td>
+              <td></td>
+              <td><i class="fas fa-arrow-alt-circle-up" id="iIdUpIcon"></i></td>
+              <td></td>
             </tr>
 
             <tr>
-              <td><i class="fas fa-arrow-alt-circle-left"></i></td>
-              <td>5</td>
-              <td><i class="fas fa-arrow-alt-circle-right"></i></td>
+              <td><i class="fas fa-arrow-alt-circle-left" id="iIdLeftIcon"></i></td>
+              <td></td>
+              <td><i class="fas fa-arrow-alt-circle-right" id="iIdRightIcon"></i></td>
             </tr>
 
             <tr>
-              <td>7</td>
-              <td><i class="fas fa-arrow-alt-circle-down"></i></td>
-              <td>9</td>
+              <td></td>
+              <td><i class="fas fa-arrow-alt-circle-down" id="iIdDownIcon"></i></td>
+              <td></td>
             </tr>
 
             <tr>
-              <td><i class="fas fa-search-plus"></i></td>
-              <td colspan="2"><i class="fas fa-search-minus"></i></td>
+              <td colspan="3" id="tdIdPlusMinusIcon">
+                <i class="fas fa-search-plus" id="iIdPlusIcon"></i>
+                <i class="fas fa-search-minus" id="iIdMinusIcon"></i>
+              </td>
             </tr>
 
           </table>
