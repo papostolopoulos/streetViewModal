@@ -14,12 +14,14 @@ var imageSrc = {
   fov: 90,
   heading: 235,
   pitch: 10,
+  apiKey: "AIzaSyCByGoevYZ0kuKlll1voldyKUZZ3gQ4mD8",
   url: function() {
     return `https://maps.googleapis.com/maps/api/streetview?size=800x800
     &location=${this.lat},${this.lon}
     &fov=${this.fov}
     &heading=${this.heading}
-    &pitch=${this.pitch}`.match(/\S/g).join('');
+    &pitch=${this.pitch}
+    &key=${this.apiKey}`.match(/\S/g).join('');
   }
 };
 var iIdUpIcon = document.getElementById("iIdUpIcon");
