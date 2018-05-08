@@ -10,7 +10,7 @@
 * Change the cursor to pointer when hovering over the arrow icons [X]
 * Add extra form in modal [X]
 * Change colors to something more FB [X]
-* Put js conditions with error alert for the right text entry in the input box [] - ?
+* Put js conditions with error alert for the right text entry in the input box [] - ? Unimportant because the page modal does not load anyway
 
 
 
@@ -19,4 +19,6 @@
 * Update the image according to the entry of the user [X]
 * Update the angle of the Street View according to the icon clicks []
 * Update the angle of the street View according to the keyboard presses [X]
-* Update the zoom according to the mouse scrolling [] - ?
+* Update the zoom according to the mouse scrolling [] - ? Backlog
+
+* Make modal movement more interactive ? - Backlog
