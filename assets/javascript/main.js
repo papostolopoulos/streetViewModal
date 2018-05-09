@@ -1,5 +1,3 @@
-console.log("It is connected");
-
 // LIST OF VARIABLES USED
 var buttonCoordinates = document.getElementById("buttonCoordinates");
 var buttonCoordinatesModal = document.getElementById("buttonCoordinatesModal");
@@ -9,10 +7,10 @@ var divIdModal = document.getElementById("divIdModal");
 var spanIdModalClose = document.getElementById("spanIdModalClose");
 var imgIdModalPhoto = document.getElementById("imgIdModalPhoto");
 var imageSrc = {
-  lat: 40.720032,
-  lon: -73.988354,
+  lat: 37.482882,
+  lon: -122.150222,
   fov: 90,
-  heading: 235,
+  heading: 35,
   pitch: 10,
   apiKey: "AIzaSyCByGoevYZ0kuKlll1voldyKUZZ3gQ4mD8",
   url: function() {
@@ -74,7 +72,7 @@ window.onkeydown = (event)=>{
   if (event.key === "x" && divIdModal.style.display === "block") imageSrc.fov += 5;
 
   imgIdModalPhoto.src = imageSrc.url();
-  // console.log(imgIdModalPhoto.src);
+  console.log(imgIdModalPhoto.src);
 };
 
 // ADJUST IMAGE BASED ON ICON CLICK
