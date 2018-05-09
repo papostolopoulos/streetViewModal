@@ -64,8 +64,8 @@ window.onkeyup = (event)=>{
 
 // ADJUST IMAGE BASED ON KEY PRESSES
 window.onkeydown = (event)=>{
-  console.log(event);
-  console.log(event.key);
+  // console.log(event);
+  // console.log(event.key);
   if (event.key === "ArrowRight" && divIdModal.style.display === "block") imageSrc.heading += 5;
   if (event.key === "ArrowLeft" && divIdModal.style.display === "block") imageSrc.heading -= 5;
   if (event.key === "ArrowUp" && divIdModal.style.display === "block") imageSrc.pitch += 5;
@@ -74,7 +74,7 @@ window.onkeydown = (event)=>{
   if (event.key === "x" && divIdModal.style.display === "block") imageSrc.fov += 5;
 
   imgIdModalPhoto.src = imageSrc.url();
-  console.log(imgIdModalPhoto.src);
+  // console.log(imgIdModalPhoto.src);
 };
 
 // ADJUST IMAGE BASED ON ICON CLICK
@@ -84,6 +84,3 @@ iIdUpIcon.onclick = ()=> {imageSrc.pitch += 5; imgIdModalPhoto.src = imageSrc.ur
 iIdDownIcon.onclick = ()=> {imageSrc.pitch -=5; imgIdModalPhoto.src = imageSrc.url();}
 iIdPlusIcon.onclick = ()=> {imageSrc.fov -=5; imgIdModalPhoto.src = imageSrc.url();}
 iIdMinusIcon.onclick = ()=> {imageSrc.fov +=5; imgIdModalPhoto.src = imageSrc.url();}
-
-/*https://maps.googleapis.com/maps/api/streetview?size=800x800&location=40.720032,-73.988354
-&fov=90&heading=235&pitch=10 */
