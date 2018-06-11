@@ -31,7 +31,8 @@ var idMinusIcon = document.getElementById("iIdMinusIcon");
 
 
 // FUNCTIONS
-function updateImage() {
+function updateImage(event) {
+  event.preventDefault();
   var coordinatesArr = divIdModal.style.display === "block" ? inputCoordinatesModal.value.split(",") : inputCoordinates.value.split(",");
   imageSrc.lat = coordinatesArr[0].trim();
   imageSrc.lon = coordinatesArr[1].trim();
